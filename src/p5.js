@@ -5,7 +5,6 @@ const SCENE_OBJECTS = [];
 const TOTAL_PIXELS = CANVAS_WIDTH * CANVAS_HEIGHT;
 
 function setup() {
-  smooth();
   pixelDensity(2);
   frameRate(FPS_TARGET);
   createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
