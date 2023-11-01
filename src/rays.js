@@ -94,8 +94,8 @@ class Ray {
 
 class LightSource {
   constructor(rayDensity = 1) {
-    this.width = 10;
-    this.height = 10;
+    this.width = 5;
+    this.height = 5;
     this.rayDensity = rayDensity;
     this.position = new Point(0, 0);
   }
@@ -123,9 +123,10 @@ class Wall {
 }
 
 const walls = [
-  new Wall(new Point(300, 100), new Point(300, 700)),
+  new Wall(new Point(300, 100), new Point(500, 300)),
+  new Wall(new Point(100, 300), new Point(300, 500)),
   new Wall(new Point(600, 300), new Point(600, 500)),
-  new Wall(new Point(900, 300), new Point(900, 500)),
+  new Wall(new Point(800, 600), new Point(1000, 600)),
   new Wall(new Point(1200, 100), new Point(1200, 700)),
 ];
 const lightSource = new LightSource(720);

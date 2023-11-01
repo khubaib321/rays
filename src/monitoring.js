@@ -1,3 +1,19 @@
+let averageFPS = 0;
+let totalFrames = 0;
+let frameCountSinceStart = 0;
+
+function monitorFPS() {
+  let currentFPS = frameRate();
+  calculateFPSMetrics(currentFPS);
+  displayFPS && displayFPS(currentFPS);
+}
+
+function calculateFPSMetrics(currentFPS) {
+  frameCountSinceStart++;
+  totalFrames += currentFPS;
+  averageFPS = totalFrames / frameCountSinceStart;
+}
+
 function displayFPS(currentFPS) {
   fill(255); // White background
   noStroke();
