@@ -25,6 +25,13 @@ class Wall {
 }
 
 const walls = [
+  // Scene boundaries.
+  new Wall(new Point(0, 0), new Point(CANVAS_WIDTH, 0)),
+  new Wall(new Point(0, 0), new Point(0, CANVAS_HEIGHT)),
+  new Wall(new Point(CANVAS_WIDTH, 0), new Point(CANVAS_WIDTH, CANVAS_HEIGHT)),
+  new Wall(new Point(0, CANVAS_HEIGHT), new Point(CANVAS_WIDTH, CANVAS_HEIGHT)),
+
+  // Obstacles.
   new Wall(new Point(300, 100), new Point(500, 300)),
   new Wall(new Point(200, 600), new Point(500, 800)),
   new Wall(new Point(600, 300), new Point(600, 500)),
