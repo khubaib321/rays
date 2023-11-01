@@ -18,8 +18,5 @@ function draw() {
 
   SCENE_OBJECTS.forEach((object) => object.draw());
 
-  noFill();
-  arc(50, 55, 50, 50, 0, PI);
-
   monitorFPS();
 }

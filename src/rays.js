@@ -119,17 +119,20 @@ class LightSource {
   }
 
   draw = () => {
+    fill(255);
     this.position.x = mouseX;
     this.position.y = mouseY;
     ellipse(this.position.x, this.position.y, this.width, this.height);
 
-    // Draw rays extending in all directions from the light source position.
-    strokeWeight(0.3);
-    for (let i = 1; i <= this.rayDensity; ++i) {
-      const angle = map(i, 1, this.rayDensity, 0, TWO_PI);
-      new Ray(this.position, angle, TOTAL_PIXELS).draw();
+    if (mouseIsPressed) {
+      // Draw rays extending in all directions from the light source.
+      strokeWeight(0.3);
+      for (let i = 1; i <= this.rayDensity; ++i) {
+        const angle = map(i, 1, this.rayDensity, 0, TWO_PI);
+        new Ray(this.position, angle, TOTAL_PIXELS).draw();
+      }
+      strokeWeight(1);
     }
-    strokeWeight(1);
   };
 }
 
