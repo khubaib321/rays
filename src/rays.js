@@ -26,7 +26,7 @@ class Wall {
 
 const walls = [
   new Wall(new Point(300, 100), new Point(500, 300)),
-  new Wall(new Point(100, 300), new Point(300, 500)),
+  new Wall(new Point(200, 600), new Point(500, 800)),
   new Wall(new Point(600, 300), new Point(600, 500)),
   new Wall(new Point(800, 600), new Point(1000, 600)),
   new Wall(new Point(1200, 100), new Point(1200, 700)),
@@ -146,6 +146,6 @@ class LightSource {
   };
 }
 
-const lightSource = new LightSource(2160);
+const lightSource = new LightSource(4320);
 
 SCENE_OBJECTS.push(...walls, lightSource);
