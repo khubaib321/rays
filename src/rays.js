@@ -144,7 +144,7 @@ class LightSource {
 
   drawRays = () => {
     // Draw rays extending in all directions from the light source.
-    strokeWeight(0.3);
+    strokeWeight(0.4);
     for (let i = 1; i <= this.rayDensity; ++i) {
       const angle = map(i, 1, this.rayDensity, 0, TWO_PI);
       new Ray(this.position, angle, TOTAL_PIXELS).draw();
