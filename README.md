@@ -1,2 +1,2 @@
 # Rays with p5.js
-Fun with rays.
+Fun with rays (Node/Electron).
